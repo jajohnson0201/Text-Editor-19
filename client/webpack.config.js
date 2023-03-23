@@ -23,23 +23,23 @@ module.exports = () => {
         title: 'Webpack Plugin',
       }),
       new MiniCssExtractPlugin(),
-      // new InjectManifest({
-      //   swSrc: './src-sw.js',
-      //   swDest: 'service-worker.js',
-      // }),
-      new WebpackPwaManifest({
-        name: 'My Progressive Web App',
-    short_name: 'MyPWA',
-    description: 'My awesome Progressive Web App!',
-    background_color: '#ffffff',
-    crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
-    icons: [
-      {
-      src: path.resolve('./src/assets/logo.png'),
-      sizes: [96, 128, 192, 256, 384, 512]
-    }
-    ]
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
       }),
+    //   new WebpackPwaManifest({
+    //     name: 'My Progressive Web App',
+    // short_name: 'MyPWA',
+    // description: 'My awesome Progressive Web App!',
+    // background_color: '#ffffff',
+    // crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+    // icons: [
+    //   {
+    //   src: path.resolve('./src/assets/logo.png'),
+    //   sizes: [96, 128, 192, 256, 384, 512]
+    // }
+    // ]
+    //   }),
     ],
 
     module: {
