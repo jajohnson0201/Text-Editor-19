@@ -34,7 +34,7 @@ export const getDb = async () => {
   const result = await request;
 console.log('getDb implemented', result)
 result
-? consolelog('data retrieved',result.value)
+? console.log('data retrieved',result.value)
 : console.log('data not retrieved')
 return result?.value;
 };
